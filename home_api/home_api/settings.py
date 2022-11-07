@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'groceries.apps.GroceriesConfig',
+    'authentication.apps.AuthenticationConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
