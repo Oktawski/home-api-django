@@ -2,8 +2,8 @@ from django.db import models
 
 class Category(models.Model):
     CATEGORIES = (
-        ('vegetables', 'Vegetables'),
-        ('fruit', 'Fruit')
+        ('Vegetables', 'Vegetables'),
+        ('Fruit', 'Fruit')
     )
     name = models.CharField(primary_key=True, max_length=20, choices=CATEGORIES)
 
