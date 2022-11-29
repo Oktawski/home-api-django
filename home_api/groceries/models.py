@@ -18,4 +18,3 @@ class Product(models.Model):
     quantity = models.PositiveSmallIntegerField(null=False, default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     
-   
