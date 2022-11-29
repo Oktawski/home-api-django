@@ -17,5 +17,5 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
     quantity = models.PositiveSmallIntegerField(null=False, default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    #buba
     
+   
