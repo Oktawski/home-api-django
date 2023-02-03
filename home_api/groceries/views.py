@@ -7,8 +7,15 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Category, Product
+from .serializers import CategorySerializer, ProductSerializer
+
+@permission_classes([IsAuthenticated])
+class CategoryList(APIView):
+    def get(self, request: HttpRequest) -> HttpResponse:
+        categories = Category.objects
+        serializer = CategorySerializer(categories, many = True)
+        return Response(serializer.data)
 
 
 @permission_classes([IsAuthenticated])

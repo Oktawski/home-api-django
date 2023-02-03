@@ -4,7 +4,12 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     CATEGORIES = (
         ('Vegetables', 'Vegetables'),
-        ('Fruit', 'Fruit')
+        ('Fruit', 'Fruit'),
+        ('Meat', 'Meat'),
+        ('Vegan', 'Vegan'),
+        ('Seasoning', 'Seasoning'),
+        ('Sweet', 'Sweet'),
+        ('Drink', 'Drink')
     )
     name = models.CharField(primary_key=True, max_length=20, choices=CATEGORIES)
 
