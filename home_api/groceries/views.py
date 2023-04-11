@@ -22,7 +22,7 @@ class CategoryList(APIView):
 class ProductList(APIView):
     def get(self, request: HttpRequest) -> HttpResponse:
         user_id = request.user.id
-        products = Product.objects.filter(user_id=user_id)
+        products = Product.objects.filter(user_id=user_id).order_by('category')
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 
