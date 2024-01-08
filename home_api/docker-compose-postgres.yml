@@ -4,7 +4,9 @@ services:
   db:
     image: postgres
     restart: always
+    container_name: home-db
     environment:
+      - POSTGRES_DB=home-db-dev
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=thisisnotactualpasswordlol
     ports:
